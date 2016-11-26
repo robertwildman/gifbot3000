@@ -21,7 +21,7 @@ bot.dialog('/', function (session) {
 	var text = session.message.text;
 
 		giphy.translate(text, function(err, res) {
- 			var message = new builder.Message(session).addAttachments([{
+ 			var message = new builder.Message(session).message("GIF").addAttachments([{
                 contentType: "image/gif",
                 contentUrl: res.data.images.original.url
             }]);
