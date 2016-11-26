@@ -23,7 +23,7 @@ bot.dialog('/', function (session) {
 		giphy.translate(text, function(err, res) {
  			var message = new builder.Message(session).attachments([{
                 contentType: "image/gif",
-                contentUrl: res.data.images.original.gif
+                contentUrl: res.data.images.original.url
             }]);
             session.send(message);
 		});
