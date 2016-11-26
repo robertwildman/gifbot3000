@@ -21,14 +21,12 @@ bot.dialog('/', function (session) {
 	var text = session.message.text;
 
 		giphy.translate(text, function(err, res) {
- 			var message = new builder.Message(session).attachments([{
-                contentType: "video/mp4",
-                contentUrl: res.data.images.original.mp4
-            },
+ 			var message = new builder.Message(session).attachments([
             {
                 contentType: "image/gif",
                 contentUrl: res.data.images.original.url
             }]);
+            session.sendmessage(res.data.images.original.url);
             session.endDialog(message);
 		});
 
