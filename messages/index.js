@@ -25,7 +25,7 @@ bot.dialog('/', function (session) {
                 contentType: "image/gif",
                 contentUrl: res.data.images.original.url
             }]);
-            session.send(message);
+            session.endDialog(message);
 		});
 
 });
