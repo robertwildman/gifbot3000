@@ -24,6 +24,10 @@ bot.dialog('/', function (session) {
  			var message = new builder.Message(session).attachments([{
                 contentType: "video/mp4",
                 contentUrl: res.data.images.original.mp4
+            },
+            {
+                contentType: "image/gif",
+                contentUrl: res.data.images.original.url
             }]);
             session.endDialog(message);
 		});
