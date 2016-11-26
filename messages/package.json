@@ -1,0 +1,19 @@
+{
+  "name": "gifbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "botbuilder": "^3.4.2",
+    "giphy-api": "^1.2.1",
+    "botbuilder-azure": "0.0.1"
+  },
+  "devDependencies": {
+      "restify": "^4.1.1"
+  },  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robert Wildman",
+  "license": "ISC"
+}
